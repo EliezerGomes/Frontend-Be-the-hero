@@ -1,9 +1,9 @@
-import Routes from "./routes";
+import Rotas from "./routes";
 import "./global.css"
 
 function App() {
   return (
-    <Routes />
+    <Rotas />
   );
 }
 

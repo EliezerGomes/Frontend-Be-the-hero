@@ -1,15 +1,19 @@
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
-import Logon from './pages/Logon'
-import Register from './pages/Register'
+import Logon from './pages/Logon';
+import Register from './pages/Register';
+import Profile from './pages/Profile';
+import NewIncident from './pages/NewIncident';
 
-export default function Routes(){
+export default function Rotas(){
     return(
         <BrowserRouter>
-            <Switch>
-                <Route exact path="/" component={Logon}/>
-                <Route path="/register" component={Register}/>
-            </Switch>
+            <Routes>
+                <Route exact path="/" element={<Logon/>}/>
+                <Route path="/register" element={<Register/>}/>
+                <Route path="/profile" element={<Profile/>}/>
+                <Route path="/incidents/new" element={<NewIncident/>}/>
+            </Routes>
         </BrowserRouter>
     ) 
 }
